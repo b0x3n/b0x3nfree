@@ -139,7 +139,7 @@
             if (route !== false)
                 __set_route(route);
 
-            $(`#${target_id}`).load(_page);
+            $(`#${target_id}`).load(_content['url'] + _page);
 
             $(`#${target_id}`).animate({
                 'opacity': '0.99'
