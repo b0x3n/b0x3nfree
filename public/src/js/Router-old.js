@@ -14,7 +14,7 @@
 
 
         let     _content = {
-            'url': 'localhost:3000',
+            'url': 'https://b0x3n.github.io/b0x3nfree',
             'home': '/public/pages/home.html',
             'projects': {
                 'project_1': '/public/projects/Project_1.html',
