@@ -11,6 +11,8 @@
         const   _objMouseleave = { 'color': '#FFCC00' };
         const   _mouse_anim_duration = 250;
 
+        const   __url = window.__base_url;
+
         const   _content_id = 'content';
 
         const   _routes = {
@@ -37,14 +39,14 @@
                     <div id="${_content_id}_${key}" class="page"></div>
                 `);
 
-                $(`#${_content_id}_${key}`).load(_routes[key]);
+                $(`#${_content_id}_${key}`).load(__url + _routes[key]);
             });
 
             $(`#${_content_id}`).append(`
                 <div id="page_404" class="page"></div>
             `);
 
-            $(`#page_404`).load(_not_found);
+            $(`#page_404`).load(__url + _not_found);
 
         };
 

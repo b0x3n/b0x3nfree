@@ -14,7 +14,7 @@
 
 
         let     _content = {
-            'url': 'https://b0x3n.github.io/b0x3nfree',
+            'url': window.__base_url,
             'home': '/public/pages/home.html',
             'projects': {
                 'project_1': '/public/projects/Project_1.html',

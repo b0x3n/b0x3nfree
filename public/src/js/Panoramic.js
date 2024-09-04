@@ -9,7 +9,7 @@
 
         objConfig = {
             'duration': 500000,
-            'url': 'https://b0x3n.github.io/b0x3nfree',
+            'url': window.__base_url,
             'path': '/public/images/panoramic/',
             'images': [
                 '360_landscape_1_clipped.jpg',
