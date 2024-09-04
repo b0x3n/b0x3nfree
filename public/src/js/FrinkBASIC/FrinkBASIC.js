@@ -125,7 +125,7 @@
                 __script_name.push(script_name);
 
                 const   __load_script = LoadScript(
-                    window.__base_url,
+                    objConfigure['base'],
                     objConfigure['path'],
                     script_name,
                     script_data => {
