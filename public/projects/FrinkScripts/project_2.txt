@@ -1,0 +1,51 @@
+///////////////////////////////////////////////////////////
+//  public/projects/FrinkScripts/project_2.txt           //
+///////////////////////////////////////////////////////////
+//
+
+    enable_cursor
+    sleep 100
+
+    display.color = "rgba(64, 220, 164, 1)"
+
+    project.title = "Qubes"
+    project.subtitle = "Tetris-like game written in "
+    project.language.0 = "HTML/CSS/JavaScript"
+    project.repository = "github.com/b0x3n/Qubes"
+    project.demo = "b0x3n.github.io/Qubes"
+
+    project.information = "\.bold\.s16\.bold\. I built this during lockdown, first attempt at a game with "
+    project.additional = "Follow the links below for more information";
+
+    system.print_timer = 0
+    mvprint 1 3 "Project Name: "
+    mvprint 2 3 "Description: "
+
+    display.bottom = ($display.rows - 2)
+    display.right = ($display.cols - 6)
+
+    display.color = "#FFCC00"
+
+    mvprintlink $display.bottom 3 "Github repository" $project.repository "https"
+    mvprintlink $display.bottom $display.right "Demo" $project.demo "https"
+
+    sleep 100
+
+    display.color = "rgba(255, 255, 255, 1)"    
+    system.print_timer = 1
+    mvprint 1 18 $project.title
+
+    sleep 100
+
+    mvprint 2 18 $project.subtitle
+    display.color = "#FFCC00"
+    print $project.language.0
+
+
+    display.color = "#FFF"
+    mvprint 5 10 $project.information
+    display.color = "#FFCC00"
+    print $project.language.0
+
+    display.color = "#FFF"
+    mvprint 9 6 $project.additional

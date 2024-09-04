@@ -1,0 +1,28 @@
+///////////////////////////////////////////////////////////
+//  src/scss/style/_footer.scss                          //
+///////////////////////////////////////////////////////////
+//
+//
+//
+
+    footer {
+        
+        @include __base_element(
+            'bottom',
+            0vh,
+            100vw,
+            6vh,
+            14
+        );
+
+        font-family: 'IBM Flex Mono', system-ui;
+        font-size: 18px;
+        font-weight: bold;
+
+        color: #1E90FF;
+        background-color: rgba(32, 32, 32, 0.25);
+
+        text-align: center;
+        line-height: 5vh;
+
+    }

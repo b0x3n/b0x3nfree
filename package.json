@@ -1,0 +1,22 @@
+{
+  "name": "projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-dev": "sass --watch --embed-source-map src/scss:public/src/css",
+    "sass-prod": "sass --no-source-map --style compressed src/scss:public/src/css",
+    "dev": "concurrently \"npm run sass-dev\" \"npx serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "sass": "^1.77.8"
+  },
+  "dependencies": {
+    "jquery-color": "^3.0.0"
+  }
+}

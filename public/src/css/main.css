@@ -1,0 +1,259 @@
+*, body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: none;
+}
+
+.panoramic_wrapper {
+  position: absolute;
+  top: 0%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  animation: __show_panoramic_wrapper;
+  animation-duration: 1s;
+  animation-direction: forwards;
+  animation-iteration-count: 1;
+  z-index: 1;
+}
+
+.panoramic_image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.panoramic_image img {
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: auto;
+}
+
+@keyframes __show_panoramic_wrapper {
+  from {
+    opacity: 0.01;
+  }
+  to {
+    opacity: 0.99;
+  }
+}
+.filter {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(64, 64, 127, 0.5);
+  z-index: 5;
+}
+
+header {
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  width: 100vw;
+  height: 99px;
+  z-index: 10;
+  margin: 0px;
+  padding: 0 0.5vw;
+  color: #1E90FF;
+  background-color: rgba(32, 32, 32, 0.25);
+  font-family: "VT323", monospace;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.header_blox {
+  position: absolute;
+  display: block;
+  top: 26px;
+  height: 49px;
+  width: 168px;
+}
+
+nav {
+  position: absolute;
+  top: 99px;
+  left: 0vw;
+  width: 100vw;
+  height: 5vh;
+  z-index: 12;
+  margin: 0px;
+  padding: 0 0.5vw;
+  display: none;
+  background-color: rgba(32, 32, 32, 0.25);
+  text-align: right;
+  line-height: 4.5vh;
+}
+
+.page_link {
+  color: #FFCC00;
+  background-color: rgba(0, 0, 0, 0.01);
+  text-decoration: none;
+  font-family: "IBM Flex Mono", system-ui;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 2vw;
+}
+
+.content {
+  position: absolute;
+  top: 99px;
+  left: 0vh;
+  width: 100vw;
+  height: calc(100vh - (6vh + 99px));
+  z-index: 12;
+  margin: 0px;
+  padding: 0 0.5vw;
+  color: #FFF;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.page {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.5vw;
+}
+
+.content h1,
+.page h1 {
+  font-family: "IBM Flex Mono", system-ui;
+  font-size: 30px;
+  margin-bottom: 2vh;
+}
+
+.content p,
+.page p {
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0vh;
+  width: 100vw;
+  height: 6vh;
+  z-index: 14;
+  margin: 0px;
+  padding: 0 0.5vw;
+  font-family: "IBM Flex Mono", system-ui;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1E90FF;
+  background-color: rgba(32, 32, 32, 0.25);
+  text-align: center;
+  line-height: 5vh;
+}
+
+.blox_cell {
+  position: absolute;
+  width: 4px;
+  height: 6px;
+  margin: 1px;
+  padding: 0px;
+  background-color: #1E90FF;
+  box-sizing: border-box;
+}
+
+.frink {
+  position: relative;
+  float: left;
+  top: 1vh;
+  left: 0px;
+  width: 100%;
+  height: calc(100% - 2vh);
+  animation-name: __frink_screen_flicker;
+  animation-duration: 0.1s;
+  animation-direction: forwards;
+  animation-iteration-count: infinite;
+}
+
+.frink_cell {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  color: rgb(64, 255, 104);
+  background-color: rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+.cell_link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cell_link:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cell_link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes __frink_screen_flicker {
+  0% {
+    opacity: 0.99;
+  }
+  95% {
+    opacity: 0.97;
+  }
+}
+@media screen and (min-width: 760px) {
+  nav {
+    display: block;
+  }
+  .content {
+    top: calc(99px + 5vh);
+    height: calc(100vh - (99px + 11vh));
+  }
+  header,
+  nav,
+  .content,
+  .page,
+  footer {
+    padding: 0 1vw;
+  }
+}
+@media screen and (min-width: 960px) {
+  header,
+  nav,
+  .content,
+  .page,
+  footer {
+    padding: 0 1.5vw;
+  }
+  .frink {
+    top: 2vh;
+    height: calc(100% - 4vh);
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../../src/scss/style/_layout.scss%22,%22../../../src/scss/style/_panoramic.scss%22,%22../../../src/scss/style/_filter.scss%22,%22../../../src/scss/style/_header.scss%22,%22../../../src/scss/pre/_mixins.scss%22,%22../../../src/scss/style/_nav.scss%22,%22../../../src/scss/style/_content.scss%22,%22../../../src/scss/style/_footer.scss%22,%22../../../src/scss/style/_blox.scss%22,%22../../../src/scss/style/_frink.scss%22,%22../../../src/scss/post/_media.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAOI;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;;ACbJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;;AAIJ;EACI;IACI;;EAEJ;IACI;;;ACvCR;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;ACRJ;ECQI;EAKI,KDVA;ECaJ,MDZI;ECaJ,ODZI;ECaJ,QDZI;ECcJ,SDbI;ECeJ;EACA;EDbA;EACA;EAEA;EACA;EACA;;;AAIJ;EACI;EACA;EACA;EACA;EACA;;;AExBJ;EDQI;EAKI,KCVA;EDaJ,MCZI;EDaJ,OCZI;EDaJ,QCZI;EDcJ,SCbI;EDeJ;EACA;ECbA;EAEA;EAEA;EACA;;;AAIJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AC1BJ;EFQI;EAKI,KEXA;EFcJ,MEbI;EFcJ,OEbI;EFcJ,QEbI;EFeJ,SEdI;EFgBJ;EACA;EEdA;EAEA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;AAAA;EAEI;EACA;EAEA;;;AAGJ;AAAA;EAEI;EACA;EACA;;;ACrCJ;EHQI;EAGI;EAKJ,MGZI;EHaJ,OGZI;EHaJ,QGZI;EHcJ,SGbI;EHeJ;EACA;EGbA;EACA;EACA;EAEA;EACA;EAEA;EACA;;;AClBJ;EACI;EAEA;EACA;EAEA;EACA;EAEA;EAEA;;;ACVJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EAAa;EAAgB;;;AAC7B;EAAqB;EAAgB;;;AACrC;EAAmB;EAAgB;;;AAEnC;EACI;IACI;;EAEJ;IACI;;;AChCR;EAEI;IACI;;EAGJ;IACI;IACA;;EAGJ;AAAA;AAAA;AAAA;AAAA;IAKI;;;AAKR;EAEI;AAAA;AAAA;AAAA;AAAA;IAKI;;EAGJ;IACI;IACA%22,%22file%22:%22main.css%22%7D */

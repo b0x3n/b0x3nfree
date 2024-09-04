@@ -1,0 +1,22 @@
+///////////////////////////////////////////////////////////
+//  src/scss/style/_layout.scss                          //
+///////////////////////////////////////////////////////////
+//
+//
+//
+
+    *, body {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: none;
+    }

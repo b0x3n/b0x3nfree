@@ -1,0 +1,30 @@
+<div id="frink_project_1" class="frink">
+</div>
+
+<script type="text/javascript">
+    
+    const   __url = `http://localhost:3000`;
+    let     __frinkBasic;
+
+    import(`${__url}/public/src/js/FrinkBASIC/FrinkBASIC.js`).then(module => {
+        __frinkBasic = module.FrinkBASIC({
+            'target_id': 'frink_project_1',
+            'base': 'http://localhost:3000',
+            'path': '/public/projects/FrinkScripts/',
+            'page_id': 'content_project_1',
+            'scripts': [
+                'project_1.txt'
+            ],
+            'timeslice': 1,
+            'verbose': true
+        });
+
+        __main();
+    });
+
+
+    const __main = () => {
+        
+    };
+
+</script>

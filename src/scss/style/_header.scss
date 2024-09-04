@@ -1,0 +1,33 @@
+///////////////////////////////////////////////////////////
+//  src/scss/style/_header.scss                          //
+///////////////////////////////////////////////////////////
+//
+//
+//
+
+    header {
+        
+        @include __base_element(
+            0vh,
+            0vw,
+            100vw,
+            99px,
+            10
+        );
+
+        color: #1E90FF;
+        background-color: rgba(32, 32, 32, 0.25);
+
+        font-family: 'VT323', monospace;
+        font-size: 34px;
+        font-weight: bold;
+
+    }
+
+    .header_blox {
+        position: absolute;
+        display: block;
+        top: 26px;
+        height: 49px;
+        width: 168px;
+    }

@@ -1,0 +1,33 @@
+///////////////////////////////////////////////////////////
+//  src/scss/pre/_mixins.scss                            //
+///////////////////////////////////////////////////////////
+//
+//
+//
+
+    @mixin __base_element(
+        $top,
+        $left,
+        $width,
+        $height,
+        $z-index
+    ) {
+
+        position: absolute;
+
+        @if $top == 'bottom' {
+            bottom: 0px;
+        } @else {
+            top: $top;
+        }
+
+        left: $left;
+        width: $width;
+        height: $height;
+
+        z-index: $z-index;
+
+        margin: 0px;
+        padding: 0 .5vw;
+
+    }

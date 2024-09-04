@@ -1,0 +1,42 @@
+///////////////////////////////////////////////////////////
+//  src/scss/style/_frink.scss                           //
+///////////////////////////////////////////////////////////
+//
+//
+//
+
+
+    .frink {
+        position: relative;
+        float: left;
+        top: 1vh;
+        left: 0px;
+        width: 100%;
+        height: calc(100% - 2vh);
+        animation-name: __frink_screen_flicker;
+        animation-duration: .1s;
+        animation-direction: forwards;
+        animation-iteration-count: infinite;
+    }
+
+    .frink_cell {
+        position: absolute;
+        margin: 0px;
+        padding: 0px;
+        color: rgba(64, 255, 104, 1);
+        background-color: rgba(0, 0, 0, 0.25);
+        box-sizing: border-box;
+    }
+
+    .cell_link { color: inherit; text-decoration: none; }
+    .cell_link:visited { color: inherit; text-decoration: none; }
+    .cell_link:hover { color: inherit; text-decoration: none; }
+
+    @keyframes __frink_screen_flicker {
+        0% {
+            opacity: 0.99;
+        }
+        95% {
+            opacity: 0.97;
+        }
+    }

@@ -1,0 +1,20 @@
+///////////////////////////////////////////////////////////
+//  src/scss/style/_blox.scss                            //
+///////////////////////////////////////////////////////////
+//
+//
+//
+
+    .blox_cell {
+        position: absolute;
+
+        width: 4px;
+        height: 6px;
+
+        margin: 1px;
+        padding: 0px;
+
+        background-color: #1E90FF;
+
+        box-sizing: border-box;
+    }

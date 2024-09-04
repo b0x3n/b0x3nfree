@@ -1,0 +1,17 @@
+///////////////////////////////////////////////////////////
+//  src/scss/style/_filter.scss                          //
+///////////////////////////////////////////////////////////
+//
+//
+//
+
+    .filter {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-color: rgba(64, 64, 127, .5);
+        z-index: 5;
+    }

@@ -1,0 +1,35 @@
+///////////////////////////////////////////////////////////
+//  src/scss/style/_nav.scss                             //
+///////////////////////////////////////////////////////////
+//
+//
+//
+
+    nav {
+        
+        @include __base_element(
+            99px,
+            0vw,
+            100vw,
+            5vh,
+            12
+        );
+
+        display: none;
+
+        background-color: rgba(32, 32, 32, 0.25);
+
+        text-align: right;
+        line-height: 4.5vh;
+
+    }
+
+    .page_link {
+        color: #FFCC00;
+        background-color: rgba(0, 0, 0, 0.01);
+        text-decoration: none;
+        font-family: 'IBM Flex Mono', system-ui;
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 2vw;
+    }

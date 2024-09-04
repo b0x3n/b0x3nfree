@@ -1,0 +1,44 @@
+///////////////////////////////////////////////////////////
+//  src/scss/post/_media.scss                            //
+///////////////////////////////////////////////////////////
+//
+//
+//
+    
+    @media screen and (min-width: 760px) {
+
+        nav {
+            display: block;
+        }
+
+        .content {
+            top: calc(99px + 5vh);
+            height: calc(100vh - (99px + 11vh));
+        }
+
+        header,
+        nav,
+        .content,
+        .page,
+        footer {
+            padding: 0 1vw;
+        }
+
+    }
+    
+    @media screen and (min-width: 960px) {
+
+        header,
+        nav,
+        .content,
+        .page,
+        footer {
+            padding: 0 1.5vw;
+        }
+
+        .frink {
+            top: 2vh;
+            height: calc(100% - 4vh);
+        }
+
+    }
